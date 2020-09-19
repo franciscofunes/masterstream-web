@@ -1,9 +1,9 @@
-# Web page for MasterStream Product, audio stream interface
+### Web page for MasterStream Product, audio stream interface
 
-The web page was make with a modified [Colorlib](https://pip.pypa.io/en/stable/) template
+The web page was make with a modified [Colorlib](https://colorlib.com/) template
 
-## Hosting
-For hosting we use [Firebase](https://pip.pypa.io/en/stable/)
+### Hosting
+For hosting we use [Firebase](https://firebase.google.com/?hl=es)
 
-## Deploy version
+### Deploy version
 Visit [MasterStream]()

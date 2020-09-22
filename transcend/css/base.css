@@ -928,21 +928,21 @@ textarea {
 
 .float{
 	position:fixed;
-	width:53px;
-	height:53px;
-	bottom:50px;
-	right:60px;
-	background-color:#26b85c;
+	width:60px;
+	height:60px;
+	bottom:100px;
+	left:80px;
+	background-color:#25d366;
 	color:#FFF;
 	border-radius:50px;
 	text-align:center;
-    font-size:20px;
+  font-size:36px;
 	box-shadow: 2px 2px 3px #999;
-    z-index:100;
+  z-index:100;
 }
 
 .my-float{
-	margin-top:16px;
+	margin-top:10px;
 }
 
 /*# sourceMappingURL=base.css.map */

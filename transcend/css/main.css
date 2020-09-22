@@ -93,7 +93,7 @@ a {
 a:hover,
 a:focus,
 a:active {
-  color: #26bfb5;
+  color: #161818;
 }
 
 a:hover,
@@ -1711,7 +1711,7 @@ input::-moz-focus-inner {
   width: 100%;
   height: 100%;
   vertical-align: middle;
-  padding-bottom: 15.6rem;
+  padding-bottom: 15.0rem;
   overflow: hidden;
   position: relative;
 }

@@ -81,6 +81,11 @@ body {
   padding: 0;
 }
 
+.video-fluid {
+  width: 100%;
+  height: auto;
+}
+
 /* ------------------------------------------------------------------- 
  * ## links
  * ------------------------------------------------------------------- */
@@ -859,8 +864,6 @@ button.btn--medium {
   height: 5.7rem !important;
   line-height: 5.3rem !important;
 }
-
-
 
 .btn--large,
 button.btn--large {

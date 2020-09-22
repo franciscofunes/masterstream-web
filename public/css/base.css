@@ -945,4 +945,8 @@ textarea {
 	margin-top:16px;
 }
 
+.video-fluid {
+    width: 50%;
+    height: auto;
+}
 /*# sourceMappingURL=base.css.map */

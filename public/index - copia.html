@@ -39,7 +39,6 @@
     ================================================== -->
     <script src="js/modernizr.js"></script>
     <script src="js/pace.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
 
     <!-- favicons
     ================================================== -->
@@ -87,7 +86,6 @@
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
-    
 
   </head>
 
@@ -718,7 +716,7 @@
                 value=""
                 name="name"
                 class="email"
-                id="contact-name"
+                id="mc-email"
                 placeholder="Nombre y apellido"
                 required=""
               />
@@ -727,8 +725,8 @@
                 value=""
                 name="telefono"
                 class="email"
-                id="contact-email"
-                placeholder="Email"
+                id="mc-email"
+                placeholder="Telefono"
                 required=""
               />
               <input
@@ -736,44 +734,13 @@
                 value=""
                 name="EMAIL"
                 class="email"
-                id="contact-message"
-                placeholder="Mensaje"
+                id="mc-email"
+                placeholder="Dirección de mail"
                 required=""
               />
-              <!--<input  type="submit" name="subscribe" value="Encargalo" />-->
-              <button target="_blank "id="send">Enviar</button>
+              <input type="submit" name="subscribe" value="Encargalo" />
               <label for="mc-email" class="subscribe-message"></label>
             </form>
-            <script>
-              document.getElementById("send").addEventListener("click", validateForm);
-                function validateForm() {
-                  //gets the name
-                  let name = document.getElementById("contact-name").value;
-                  //gets the email
-                  let email = document.getElementById("contact-email").value;
-                  //gets the message
-                  let message = document.getElementById("contact-message").value;
-
-                  //checks if all fields have been filled before sending message.
-                  if (name.trim() == "" || email.trim() == "" || message.trim() == "") {
-                    alert("Todos los campos tienen que estar completos");
-                  } else {
-                    sendMessage(name, email, message);
-                  }
-                }
-                //sends information to firebase
-                function sendMessage(name, email, message) {
-                  //sends the name, email and message by passing them as url parameters
-                  window.location.href =
-                    "https://us-central1-elmasterstream.cloudfunctions.net/sendMail?name= " +
-                    name +
-                    "&email=" +
-                    email +
-                    "&message=" +
-                    message +
-                    "";
-                }
-            </script>
           </div>
           <!-- end contact-subscribe -->
         </div>

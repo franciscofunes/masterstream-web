@@ -4,15 +4,15 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8" />
-    <title>MasterStream - Dispositivo de Audio Portátil</title>
+    <title>MasterStream - Soluciones de audio para músicos</title>
     <meta
       name="description"
-      content="MasterStream dispositivo de audio portátil"
+      content="MasterStream Soluciones de audio para músicos"
     />
     <meta name="author" content="Francisco Funes" />
     <meta
       property="og:title"
-      content="MasterStream - Dispositivo de Audio Portátil"
+      content="MasterStream - Soluciones de audio para músicos"
     />
     <meta
       property="og:description"
@@ -190,7 +190,7 @@
           </h1>
 
           <p>
-            Creado para darte facilmente un audio de calidad en tus transmisiones via streaming y grabaciones con dispositivos móviles. <br />
+            Creado para darte fácilmente un audio de calidad en tus transmisiones vía streaming y grabaciones con dispositivos móviles. <br />
           </p>
           <a
             href="manual.html"
@@ -300,8 +300,8 @@
               <h4>Portabilidad</h4>
               <p>
                 LLevalo a donde quieras y hace tus streamings con tus compañeros
-                de banda. Usalo para practicar , potencia las capacidades de tu
-                dispositivo móvil con MasterStream
+                de banda. Usalo para practicar , potencia las capacidades de tus
+                dispositivos móviles con MasterStream.
               </p>
             </div>
           </div>
@@ -319,7 +319,7 @@
               <h4>Resistente y sólido</h4>
 
               <p>
-                Una construcción sólida y robusta, apta para el trajin diario de
+                Una construcción sólida y robusta, apta para el trajín diario de
                 la vida de un músico, ir a ensayos, estudios, etc.
               </p>
             </div>
@@ -716,7 +716,7 @@
                 value=""
                 name="name"
                 class="email"
-                id="mc-email"
+                id="contact-name"
                 placeholder="Nombre y apellido"
                 required=""
               />
@@ -725,8 +725,8 @@
                 value=""
                 name="telefono"
                 class="email"
-                id="mc-email"
-                placeholder="Telefono"
+                id="contact-email"
+                placeholder="Email"
                 required=""
               />
               <input
@@ -734,13 +734,44 @@
                 value=""
                 name="EMAIL"
                 class="email"
-                id="mc-email"
-                placeholder="Dirección de mail"
+                id="contact-message"
+                placeholder="Mensaje"
                 required=""
               />
-              <input type="submit" name="subscribe" value="Encargalo" />
+              <!--<input  type="submit" name="subscribe" value="Encargalo" />-->
+              <button target="_blank "id="send">Enviar</button>
               <label for="mc-email" class="subscribe-message"></label>
             </form>
+            <script>
+              document.getElementById("send").addEventListener("click", validateForm);
+                function validateForm() {
+                  //gets the name
+                  let name = document.getElementById("contact-name").value;
+                  //gets the email
+                  let email = document.getElementById("contact-email").value;
+                  //gets the message
+                  let message = document.getElementById("contact-message").value;
+
+                  //checks if all fields have been filled before sending message.
+                  if (name.trim() == "" || email.trim() == "" || message.trim() == "") {
+                    alert("Todos los campos tienen que estar completos");
+                  } else {
+                    sendMessage(name, email, message);
+                  }
+                }
+                //sends information to firebase
+                function sendMessage(name, email, message) {
+                  //sends the name, email and message by passing them as url parameters
+                  window.location.href =
+                    "https://us-central1-elmasterstream.cloudfunctions.net/sendMail?name= " +
+                    name +
+                    "&email=" +
+                    email +
+                    "&message=" +
+                    message +
+                    "";
+                }
+            </script>
           </div>
           <!-- end contact-subscribe -->
         </div>
